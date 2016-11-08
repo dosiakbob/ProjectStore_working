@@ -7,8 +7,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import ua.com.cookbook.entity.Ingredient;
-import ua.com.cookbook.service.IngredientService;
 import ua.com.coolshop.entity.Commodity;
 import ua.com.coolshop.service.CommodityService;
 
