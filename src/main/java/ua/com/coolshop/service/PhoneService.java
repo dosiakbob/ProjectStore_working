@@ -2,8 +2,6 @@ package ua.com.coolshop.service;
 
 import java.util.List;
 
-import ua.com.coolshop.entity.Phones;
-
 public interface PhoneService {
 
 	

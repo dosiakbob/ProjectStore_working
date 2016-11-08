@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import ua.com.coolshop.entity.Phones;
 import ua.com.coolshop.repository.PhoneRepository;
 import ua.com.coolshop.service.PhoneService;
 

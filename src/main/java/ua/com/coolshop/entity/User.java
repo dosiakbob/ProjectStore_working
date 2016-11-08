@@ -1,11 +1,6 @@
 package ua.com.coolshop.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 
 @Entity
 public class User {
@@ -14,17 +9,20 @@ public class User {
 
 
 	private int id;
-	private String userName;
+	private String username;
 	private String email;
 	private String password;
-	
+
+
+
 	public User() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public User(String userName, String email, String password) {
+
+	public User(String username, String email, String password) {
 		super();
-		this.userName = userName;
+		this.username = username;
 		this.email = email;
 		this.password = password;
 	}
@@ -37,12 +35,12 @@ public class User {
 		this.id = id;
 	}
 
-	public String getUserName() {
-		return userName;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getEmail() {
@@ -63,9 +61,10 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", userName=" + userName + ", email=" + email + ", password=" + password + "]";
+		return "User [id=" + id + ", userName=" + username + ", email=" + email + ", password=" + password + "]";
 	}
-	
-	
-	
+
+
+	public void setRole(Role roleUser) {
+	}
 }

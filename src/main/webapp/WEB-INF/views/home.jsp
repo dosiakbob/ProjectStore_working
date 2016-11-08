@@ -1,20 +1,42 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; UTF-8">
 <title>COOL SHOP</title>
+	<link rel="stylesheet" type="text/css" href="../../resources/css/main.css">
+
 </head>
 <body>
 <header>
-	<h1>CoolShop - ??????? ?/? ???????</h1>
-	<div style=" margin-left: 80%">
-	<a href="user">Sign In</a>
+
+	<%--<button onclick='location.href="login"'class="button">Увійти</button>--%>
+    <a href="login">увійти</a>
 
 </header>
-	<br>
-	<div style="text-align: center; margin-top: 20%">
-		<a href="phone">phone</a> <br>
+<div class="fp">
+	<div class="fpp">
+		<div class="leftmenu">
+
+			<div class="form">
+				<!-- тут можна поставити форму пошуку -->
+
+				<li> <a href="phone">Мобільні телефони</a></li>
+				<li> <a href="tablet">Планшети</a></li>
+				<li> <a href="notebook">Ноутбуки</a></li>
+				<li> <a href="acsessorie">Аксесуари</a></li>
+
+			</div>
+
+		</div>
+	</div>
+	<div class="rightside">
+		не знаю як зробити тут список останніх доданих
+
+		плюс тут має бути circle з бутстрапу
+
+	</div>
+</div>
 </body>
 </html>
