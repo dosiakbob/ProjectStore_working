@@ -1,3 +1,5 @@
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -5,7 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; UTF-8">
 <title>COOL SHOP</title>
-	<link rel="stylesheet" type="text/css" href="../../resources/css/main.css">
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/main.css">
 
 </head>
 <body>
@@ -13,7 +15,7 @@
 
 	<%--<button onclick='location.href="login"'class="button">Увійти</button>--%>
 		<sec:authorize access="hasRole('ROLE_ADMIN')">
-			<a href="commodity">commodity</a>
+			<a href="commodity">commodity</head>
 			<br>
 			<a href="orders">orders</a>
 		</sec:authorize>
