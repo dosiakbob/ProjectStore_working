@@ -18,12 +18,11 @@
 </head>
 <body>
 
-<form role="form">
-    <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" class="form-control" id="email" placeholder="Введите email">
-        <p class="help-block">Пример строки с подсказкой</p>
-    </div>
+
+
+
+<form action="Loginprocesing" method="POST">
+
     <div class="form-group">
         <%--@declare id="username"--%><label for="username">username</label>
         <input type="username" class="form-control" id="username" placeholder="username">
@@ -32,11 +31,9 @@
         <%--@declare id="password"--%><label for="password">Пароль</label>
         <input type="password" class="form-control" id="password" placeholder="Пароль">
     </div>
-    <div class="checkbox">
-        <label><input type="checkbox"> Чекбокс</label>
-    </div>
-    <button type="submit" class="btn btn-success">Войти</button>
-</form>
+
+    <button> sign in </button>
+
 
 </body>
 </html>

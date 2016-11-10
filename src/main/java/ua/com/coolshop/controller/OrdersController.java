@@ -33,7 +33,7 @@ public class OrdersController {
         return "orders";
     }
 
-    @RequestMapping(value="/newDish", method=RequestMethod.POST)
+    @RequestMapping(value="/newOrders", method=RequestMethod.POST)
     public String newDish(@ModelAttribute Orders orders, @RequestParam String [] choosenCommodities){
 
 //		Dish dish = new Dish();
@@ -41,14 +41,14 @@ public class OrdersController {
 //		dish.setWeight(Double.parseDouble(dishWeight));
 
 
-        List<Commodity> ingredients = new ArrayList<Commodity>();
+        List<Commodity> commodities = new ArrayList<Commodity>();
 
         for (int i = 0; i < choosenCommodities.length; i++) {
-            ingredients.add(commodityService.findOne(Integer.parseInt(choosenCommodities[i])));
+            commodities.add(commodityService.findOne(Integer.parseInt(choosenCommodities[i])));
         }
 
 
-        orders.setCommodities(choosenCommodities);
+        orders.setCommodities(commodities);
         ordersService.save(orders);
         return "redirect:/orders";
 

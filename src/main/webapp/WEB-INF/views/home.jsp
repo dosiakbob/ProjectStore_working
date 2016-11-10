@@ -12,7 +12,18 @@
 <header>
 
 	<%--<button onclick='location.href="login"'class="button">Увійти</button>--%>
-    <a href="login">увійти</a>
+		<sec:authorize access="hasRole('ROLE_ADMIN')">
+			<a href="commodity">commodity</a>
+			<br>
+			<a href="orders">orders</a>
+		</sec:authorize>
+		<br> <a href="registration">registration</a> <br>
+		<sec:authorize access="!isAuthenticated()">
+			<a href="Login">Login</a>
+		</sec:authorize>
+		<sf:form action="Logout" method="post">
+			<button>logout</button>
+		</sf:form>
 
 </header>
 <div class="fp">

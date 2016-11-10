@@ -1,7 +1,7 @@
 package ua.com.coolshop.entity;
 
 import javax.persistence.*;
-import java.util.Arrays;
+
 import java.util.List;
 
 @Entity
@@ -14,7 +14,7 @@ public class Orders {
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "orders_commodity", joinColumns = @JoinColumn(name = "id_orders"), inverseJoinColumns = @JoinColumn(name = "id_commodity"))
-    private String[] commodities;
+    private List<Commodity> commodities;
 
     public Orders() {
     }
@@ -40,13 +40,19 @@ public class Orders {
         this.price = price;
     }
 
+    public void setCommodities(List<Commodity> commodities) {
+        this.commodities = commodities;
+    }
+
     @Override
     public String toString() {
         return "Orders{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
+                "name='" + name + '\'' +
                 ", price=" + price +
-                ", commodities=" + Arrays.toString(commodities) +
                 '}';
     }
+
+
 }
+
+

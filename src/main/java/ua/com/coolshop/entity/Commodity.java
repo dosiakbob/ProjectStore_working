@@ -3,7 +3,7 @@ package ua.com.coolshop.entity;
 
 import javax.persistence.*;
 import java.util.List;
-
+@Entity
 public class Commodity {
 
     @Id
@@ -54,9 +54,7 @@ public class Commodity {
         return commodities;
     }
 
-    public void setCommodities(List<Commodity> commodities) {
-        this.commodities = commodities;
-    }
+
 
     @Override
     public String toString() {
