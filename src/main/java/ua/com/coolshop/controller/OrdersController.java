@@ -34,7 +34,7 @@ public class OrdersController {
     }
 
     @RequestMapping(value="/newOrders", method=RequestMethod.POST)
-    public String newDish(@ModelAttribute Orders orders, @RequestParam String [] choosenCommodities){
+    public String newOrders(@ModelAttribute Orders orders, @RequestParam String [] choosenCommodities){
 
 //		Dish dish = new Dish();
 //		dish.setName(dishName);

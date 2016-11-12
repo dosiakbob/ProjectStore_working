@@ -7,31 +7,22 @@ import java.util.List;
 public class Commodity {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-    private String amount;
+    private String price;
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "orders_commodity", joinColumns = @JoinColumn(name = "id_commodity"), inverseJoinColumns = @JoinColumn(name = "id_orders"))
 
-    private List<Commodity> commodities;
+    private List<Orders> orderses;
 
-    public Commodity(String commodityName, String commodityAmount) {
+    public Commodity() {
     }
 
-    public Commodity(String name, String amount, List<Commodity> commodities) {
+    public Commodity(String price, String name) {
+        this.price = price;
         this.name = name;
-        this.amount = amount;
-        this.commodities = commodities;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -42,27 +33,21 @@ public class Commodity {
         this.name = name;
     }
 
-    public String getAmount() {
-        return amount;
+    public String getPrice() {
+        return price;
     }
 
-    public void setAmount(String amount) {
-        this.amount = amount;
+    public void setPrice(String price) {
+        this.price = price;
     }
-
-    public List<Commodity> getCommodities() {
-        return commodities;
-    }
-
-
 
     @Override
     public String toString() {
         return "Commodity{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", amount='" + amount + '\'' +
-                ", commodities=" + commodities +
+                "name='" + name + '\'' +
+                ", price='" + price + '\'' +
                 '}';
     }
 }
+
+

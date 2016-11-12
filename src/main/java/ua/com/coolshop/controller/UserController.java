@@ -44,7 +44,7 @@ public class UserController {
             return "login";
     }
 
-    @RequestMapping (value="/logout", method=RequestMethod.POST)
+    @RequestMapping (value="/Logout", method=RequestMethod.POST)
     public String logout(){
         return "redirect:/";
     }
@@ -54,7 +54,7 @@ public class UserController {
         return "redirect:/";
     }
 
-    @RequestMapping (value="/loginprocesing", method=RequestMethod.POST)
+    @RequestMapping (value="/Loginprocesing", method=RequestMethod.POST)
     public String loginprocesing(){
         return "redirect:/";
     }

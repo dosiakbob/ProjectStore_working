@@ -3,13 +3,12 @@
 <html>
 <head>
     <title>COOL SHOP</title>
-    <link rel="stylesheet" type="text/css" href="/resources/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../../css/main.css">
 </head>
 <body>
 
 <header>
 
-    <button onclick='location.href="loginpage"'class="button">Увійти</button>
 
 </header>
 <div class="fp">

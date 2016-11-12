@@ -3,6 +3,7 @@ package ua.com.coolshop.serviceImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -12,8 +13,8 @@ import ua.com.coolshop.repository.UserRepository;
 import ua.com.coolshop.service.UserService;
 
 import java.util.List;
-@Service
-public class UserServiceImpl implements UserService{
+@Service("userDetailsService")
+public class UserServiceImpl implements UserService, UserDetailsService {
 
     @Autowired
 
