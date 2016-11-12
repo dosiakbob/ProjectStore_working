@@ -15,26 +15,28 @@
 <div class="header">
     <div class="img">
 
-        <img src="../../resources/onlinelogomaker-111116-0954-4645.png" alt="????">
-</div>
-    <div class="loggining">
+        <img src="../../resources/onlinelogomaker-111116-0954-5457.jpg" alt="????">
 
-        <button onclick='location.href="login"' class="button">Увійти</button>
+        <div class="loggining">
 
-        <sec:authorize access="hasRole('ROLE_ADMIN')">
-            <a href="addcommodity">addcommodity</a>
-            <br>
-            <a href="orders">orders</a>
-        </sec:authorize>
-        <br> <a href="registration">registration</a> <br>
-        <sec:authorize access="!isAuthenticated()">
             <button onclick='location.href="login"' class="button">Увійти</button>
-        </sec:authorize>
-        <sf:form action="Logout" method="post">
-            <button>logout</button>
-        </sf:form>
-        <a href="addcommodity">addcommodity</a>
-    </div>
+
+            <sec:authorize access="hasRole('ROLE_ADMIN')">
+                <a href="addcommodity">addcommodity</a>
+                <br>
+                <a href="orders">orders</a>
+            </sec:authorize>
+            <br> <a href="registration">registration</a> <br>
+            <sec:authorize access="!isAuthenticated()">
+                <button onclick='location.href="login"' class="button">Увійти</button>
+            </sec:authorize>
+            <sf:form action="Logout" method="post">
+                <button>logout</button>
+            </sf:form>
+            <a href="addcommodity">addcommodity</a>
+        </div>
+</div>
+
 
 </div>
 <div class="fp">

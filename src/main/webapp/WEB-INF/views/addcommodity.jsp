@@ -20,10 +20,14 @@
     </c:forEach>
     <div style="text-align:center; margin-top:20%">
 
-        <form action="addcommodity" method="GET">
-            <input name="name" placeholder="commodity Name">
+        <form action="addcommodity" method="POST">
+            <input name="type" placeholder="commodityType">
             <br>
-            <input name="price" placeholder="commodity Price">
+            <input name="name" placeholder="commodityName">
+            <br>
+            <input name="description" placeholder="commodityDescription">
+            <br>
+            <input name="price" placeholder="commodityPrice">
             <br>
             <button>save commodity</button>
         </form>

@@ -87,15 +87,12 @@ body {
 
 }
 
-.header {
 
-    width: 100%;
-    height: 100px;
-
-}
 
 .loggining{
 
+    margin: 0;
+    padding: 0;
     float: right;
 
 }
@@ -111,12 +108,6 @@ body {
 
 .img{
     height: 139px;
-    width: 518px;
-
-}
-.img:hover{
-
-    float: left;
-    background: url("../resources/onlinelogomaker-111116-0954-5457.png");
+    width: 90%;
 
 }

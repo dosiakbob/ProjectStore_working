@@ -9,8 +9,11 @@ public class Commodity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    private String category;
     private String name;
-    private String price;
+    private String description;
+    private double price;
+
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "orders_commodity", joinColumns = @JoinColumn(name = "id_commodity"), inverseJoinColumns = @JoinColumn(name = "id_orders"))
@@ -20,9 +23,20 @@ public class Commodity {
     public Commodity() {
     }
 
-    public Commodity(String price, String name) {
-        this.price = price;
+    public Commodity(String category, String name, String description, double price) {
+        this.category = category;
         this.name = name;
+        this.description = description;
+        this.price = price;
+    }
+
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 
     public String getName() {
@@ -33,19 +47,29 @@ public class Commodity {
         this.name = name;
     }
 
-    public String getPrice() {
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
     @Override
     public String toString() {
         return "Commodity{" +
-                "name='" + name + '\'' +
-                ", price='" + price + '\'' +
+                "category='" + category + '\'' +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", price=" + price +
                 '}';
     }
 }
